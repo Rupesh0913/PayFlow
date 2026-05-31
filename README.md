@@ -318,7 +318,18 @@ User findByUpiId(String upiId);
 Hibernate internally generates SQL similar to:
 
 ````
-select * from users where upi_id = ?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.balance,
+        u1_0.name,
+        u1_0.phone_number,
+        u1_0.upi_id 
+    from
+        users u1_0 
+    where
+        u1_0.upi_id=?
+
 ````
 
 Explanation:

@@ -21,8 +21,7 @@ public class UserController {
     public User registerUser(@RequestBody User user) {
 
         System.out.println(user);
-
-        return userService.registerUser(user);
+        return userService.saveUser(user);
     }
 
     // GET /users

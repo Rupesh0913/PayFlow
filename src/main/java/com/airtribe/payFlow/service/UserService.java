@@ -16,14 +16,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    /*
-     * At application startup, Spring scans all classes and creates
-     * objects (beans) for classes annotated with @Service and repositories.
-     * Spring automatically injects the UserRepository object here using
-     * Dependency Injection through @Autowired.
-     */
-
-    public User registerUser(User user) {
+    public User saveUser(User user) {
         return userRepository.save(user);
     }
 
